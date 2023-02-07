@@ -2,6 +2,8 @@
 
 // Variabelen
 const mainHeading = element('h1')
+const mainImg = element ('img')
+const mainP = element ('p')
 
 
 // Logica console logs
@@ -18,16 +20,31 @@ const url = 'https://cors-anywhere.herokuapp.com/https://whois.fdnd.nl/api/v1/me
 const data = fetch(url)
             .then(response => response.json())
             .then(data => {
-                // iets doen met de data
-                // data h1 veranderen naar je naam
-                changeH1(data)
+                // data veranderen
+                changeH1(data);
+                changeImg(data);
+                changeP(data);
             })
 }
 
 function changeH1 (data) {
     console.log(data)
-    const name = data.member.name.surname 
+
+    const name = data.member.name + ' ' + data.member.surname 
     mainHeading.innerHTML = name
+}
+
+function changeP (data) {
+    const text = data.member.bio.html 
+    console.log(text)
+
+    mainP.innerHTML = text
+}
+
+function changeImg (data) {
+    const avatar = data.member.avatar 
+    console.log(avatar)
+    mainImg.src = avatar
 }
 
 
@@ -35,6 +52,8 @@ function changeH1 (data) {
 function element (element) {
     return document.querySelector(element)
 }
+
+// const div = element('div');
 
 function elements (elements) {
     return document.querySelector(elements)
