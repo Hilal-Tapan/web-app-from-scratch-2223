@@ -1,0 +1,21 @@
+/*************/
+/* CSS RESET */
+/*************/
+
+/* naar een idee van Jen Simmons */
+*, *::after, *::before {
+    box-sizing:border-box;  
+  }
+  
+  /*********************/
+  /* CUSTOM PROPERTIES */
+  /*********************/
+/*   
+  :root {
+    --color-headings:crimson
+  }
+   */
+  /********************/
+  /* ALGEMENE STYLING */
+  /********************/
+  
