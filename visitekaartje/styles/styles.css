@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 /*************/
 /* CSS RESET */
 /*************/
@@ -10,56 +11,150 @@
   /*********************/
   /* CUSTOM PROPERTIES */
   /*********************/
-/*   
-
-  :root {
-    --color-headings:crimson
-  }
+  /*   
 
    */
   /********************/
   /* ALGEMENE STYLING */
   /********************/
-
+  body {
+    overflow: hidden;
+  }
   main { 
-    background-color: white;
+    background-color: lightblue;
     display: grid;
     grid-template-columns: 1fr 1fr; 
-    /* column-gap: 1em;
-    row-gap: 1em; */
+    column-gap: .5em;
+    row-gap: .5em; 
     margin: 0;
     padding: .5em;
   }
 
-  h1 {
-    color: white;
-    margin: 0;
-  }
-
   section{
-    height: 100%;
+    height: 25vw;
     width: 100%;
   }
 
   section:nth-of-type(1){
     background-color: pink;
+    border: black solid .5em;
     grid-column-start: 1;
-
+    transition: .3s ease-in-out; 
   }
 
+  section:nth-of-type(1) h1 {
+    color: #FFFF33;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: 'Permanent Marker';
+    text-align: center;
+    font-size: 6em;
+    line-height: 1em;
+    vertical-align: middle;
+    transition:.5s;
+  }
+
+  section:nth-of-type(1):hover h1{
+    font-size: 1em;
+    transition:.5s;
+  }
+
+  section:nth-of-type(1):hover{
+    transform: scale(202%, 205%);
+    transform-origin: left top;
+    transition: .3s ease-in-out;
+    }
+
   section:nth-of-type(2){
+    background-color: white;
     grid-column-start: 2;
-    background-color: thistle;
+    background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
+    linear-gradient(-45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
+    background-size: 60px 60px;
+  }
+
+  section:nth-of-type(2):hover{
+    background-color: #FFFF33;
+    padding: 2.2em;
+  }
+
+  section:nth-of-type(2) img{
+    opacity: 0;
+    margin: 1em;
+  }
+
+  section:nth-of-type(2):hover a:nth-of-type(1) img {
+    opacity: 1;
+    background-color:pink;
+    border-radius: 1.3em;
+    width: 7em;
+  }
+  section:nth-of-type(2):hover a:nth-of-type(2) img {
+    opacity: 1;
+    background-color:pink;
+    border-radius: 1.3em;
+    width: 7em;
+  }
+
+  section:nth-of-type(2):hover {
+    display: flex;
+    padding-left: 3em;
   }
 
   section:nth-of-type(3){
-    background-color: thistle;
+    background-color: white;
+    background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
+    linear-gradient(-45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
+    background-size: 60px 60px;
     grid-column-start: 1;
   }
 
+  section:nth-of-type(3) h2{
+    opacity:0;
+    margin: 0;
+    color:pink;
+    font-size: 3em;
+    background-color: black;
+  }
+
+  section:nth-of-type(3):hover h2{
+    opacity:100%;
+    z-index: 100;
+    text-align: center;
+    padding-top:1.5em;
+
+    transition: transform 300ms;
+    transform: translate3d(0, calc(112% - 3.5rem), 0);
+  }
+
+  section:nth-of-type(3):hover{
+    background-color:#FFFF33;
+    /* opacity: 40%; */
+    /* filter: blur(1px); */
+  }
+
+
   section:nth-of-type(4){
     grid-column-start: 2;
-    background-color: pink;
+    background-color: thistle;
+    border: black solid .5em;
+    transition: .3s ease-in-out;
+  }
+
+  section:nth-of-type(4) img {
+    opacity: 0;
+    padding: 2em 2em 2em 10em;
+  }
+
+  section:nth-of-type(4):hover img {
+    opacity: 1;
+  }
+
+  section:nth-of-type(4):hover{
+    transform: scale(202%, 205%);
+    transform-origin: right bottom;
+    transition: .3s ease-in-out;
+    /* border:none; */
   }
 
   img{
