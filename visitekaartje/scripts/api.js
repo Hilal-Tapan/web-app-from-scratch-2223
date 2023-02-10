@@ -13,7 +13,7 @@ fetchData()
 
 // Fetchen van de API
 function fetchData (){
-const url = 'https://cors-anywhere.herokuapp.com/https://whois.fdnd.nl/api/v1/member?id=cldex4vm547z80bw5iug0sdi3' 
+    const url = 'https://whois.fdnd.nl/api/v1/member?id=cldex4vm547z80bw5iug0sdi3' 
 
 // Hieronder zijn de functies (fetch.then.then) zijn aan elkaar 
 // gechaint = dit heet een method -> functie die in een object leeft
