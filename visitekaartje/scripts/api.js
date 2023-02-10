@@ -2,8 +2,8 @@
 
 // Variabelen
 const mainHeading = element('h1')
-const mainImg = element ('img')
-const mainP = element ('p')
+const mainImg = element ('section:nth-of-type(4) img')
+const mainP = element ('section:nth-of-type(1) p')
 
 
 // Logica console logs
@@ -37,8 +37,7 @@ function changeH1 (data) {
 function changeP (data) {
     const text = data.member.bio.html 
     console.log(text)
-
-    mainP.innerHTML = text
+    mainP.innerHTML = text;
 }
 
 function changeImg (data) {
