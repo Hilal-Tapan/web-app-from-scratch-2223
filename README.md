@@ -6,21 +6,21 @@ In this course you will learn to build a web application without frameworks or u
 
 1. [Visitekaartje](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/week-1.md#1-visitekaartje): Ontwerp en maak met HTML, CSS en JS een visitekaartje.
 
-* Breakdownschets
+### Breakdownschets
 ![breakdownschets](https://github.com/Hilal-Tapan/web-app-from-scratch-2223/blob/main/visitekaartje/images/breakdownschets.png)
 
-* * Section 1
+*  Section 1
 h1
 p
 
-* * Section 2
+*  Section 2
 img 
 img
 
-* * Section 3
+*  Section 3
 h2
 
-* * Section 4
+*  Section 4
 img 
 
 
