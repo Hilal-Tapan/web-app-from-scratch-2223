@@ -77,5 +77,8 @@ function elements (elements) {
 
 // function doet altijd 1 ding
 
+// callback functie word uitgeroepen als het object of page geladen wordt.
+// 
+
 
 
