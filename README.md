@@ -28,7 +28,7 @@ Dit heb ik gedaan door middel van de [tutorial](https://github.com/benborgers/op
 ## Features
 
 ## User Interface
-[Mobile version](https://github.com/Hilal-Tapan/web-app-from-scratch-2223/blob/main/user-stories/images/Interface.png)
+![Mobile version](https://github.com/Hilal-Tapan/web-app-from-scratch-2223/blob/main/user-stories/images/Interface.png)
 
 ## Bronnen
 https://github.com/benborgers/opensheet#readme
