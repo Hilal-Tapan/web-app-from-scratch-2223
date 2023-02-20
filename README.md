@@ -10,12 +10,12 @@ https://hilal-tapan.github.io/web-app-from-scratch-2223/user-stories/
 ### Api
 We kregen een quotes api toegewezen vanuit de opdracht. Echter ging deze halverwege stuk waardoor we zelf een nieuwe api moesten maken.
 
-Dit heb ik gedaan door middel van de tutorial van Ben Borgers. 
+Dit heb ik gedaan door middel van de [tutorial](https://github.com/benborgers/opensheet#readme) van Ben Borgers. 
 1. Deze api is gebasseerd op een Google sheet waar ik data invul. 
 2. Vervolgens heb ik deze Google sheet gepubliceerd op het web.
 3. Hierna heb ik daar een Json bestand van gemaakt zodat ik het kon toepassen in de back-end.
-4. Hiervoor heb ik de API link gebruikt uit de tutorial:  https://opensheet.elk.sh/spreadsheet_id/tab_name
-5. Hier heb ik mijn id aan toegevoegd: https://opensheet.elk.sh/12nr4W-RHpvhnw76MCZZtujYHqP1qIU28ExM4oXQfzys/blad1
+4. Hiervoor heb ik de API link gebruikt uit de tutorial:  ```https://opensheet.elk.sh/spreadsheet_id/tab_name```
+5. Hier heb ik mijn id aan toegevoegd: ```https://opensheet.elk.sh/12nr4W-RHpvhnw76MCZZtujYHqP1qIU28ExM4oXQfzys/blad1```
 6. Hierna ontvang je een json bestand en kan je beginnen met fetchen!
 
 ## User Interface
