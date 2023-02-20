@@ -10,6 +10,7 @@ https://hilal-tapan.github.io/web-app-from-scratch-2223/user-stories/
 ### Api
 We kregen een quotes api toegewezen vanuit de opdracht. Echter ging deze halverwege stuk waardoor we zelf een nieuwe api moesten maken.
 
+### Stappenplan
 Dit heb ik gedaan door middel van de [tutorial](https://github.com/benborgers/opensheet#readme) van Ben Borgers. 
 1. Deze api is gebasseerd op een Google sheet waar ik data invul. 
 2. Vervolgens heb ik deze Google sheet gepubliceerd op het web.
