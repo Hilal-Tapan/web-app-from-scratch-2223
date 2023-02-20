@@ -1,6 +1,5 @@
 ![Logo](https://github.com/Hilal-Tapan/web-app-from-scratch-2223/blob/main/user-stories/images/Middel%202.png)
 
-# Your Daily Web Quote (YDWQ)
 Your daily web quote is een browser based one page web project, ontworpen om quotes te bekijken die alles te maken hebben met het web. 
 
 Of je nou een ux designer bent of een back-end developer, het maakt allemaal niet uit. De quotes kunnen voor iedereen van toepassing zijn!
