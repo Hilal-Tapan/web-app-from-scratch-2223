@@ -15,8 +15,8 @@ Dit heb ik gedaan door middel van de [tutorial](https://github.com/benborgers/op
 2. Vervolgens heb ik deze Google sheet gepubliceerd op het web.
 3. Hierna heb ik daar een Json bestand van gemaakt zodat ik het kon toepassen in de back-end.
 4. Hiervoor heb ik de API link gebruikt uit de tutorial:  ```https://opensheet.elk.sh/spreadsheet_id/tab_name```
-5. Hier heb ik mijn id aan toegevoegd: ```https://opensheet.elk.sh/12nr4W-RHpvhnw76MCZZtujYHqP1qIU28ExM4oXQfzys/blad1```
-6. Hierna ontvang je een json bestand en kan je beginnen met fetchen!
+5. Hier heb ik mijn id aan toegevoegd van me Google web sheet: ```https://opensheet.elk.sh/12nr4W-RHpvhnw76MCZZtujYHqP1qIU28ExM4oXQfzys/blad1```
+6. Hieruit ontvang je je json bestand en kan je beginnen met fetchen!
 
 ## User Interface
 
