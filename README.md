@@ -6,7 +6,10 @@ Of je nou een ux designer bent of een back-end developer, het maakt allemaal nie
 ## Live Site Link!
 https://hilal-tapan.github.io/web-app-from-scratch-2223/user-stories/
 
-## Resources
+## Installatie
+Clonen naar je computer ```git clone https://github.com/Hilal-Tapan/web-app-from-scratch-2223.git```
+
+## External data source
 ### Api
 We kregen een quotes api toegewezen vanuit de opdracht. Echter ging deze halverwege stuk waardoor we zelf een nieuwe api moesten maken.
 
@@ -18,6 +21,8 @@ Dit heb ik gedaan door middel van de [tutorial](https://github.com/benborgers/op
 4. Hiervoor heb ik de API link gebruikt uit de tutorial:  ```https://opensheet.elk.sh/spreadsheet_id/tab_name```
 5. Hier heb ik mijn id aan toegevoegd van me Google web sheet: ```https://opensheet.elk.sh/12nr4W-RHpvhnw76MCZZtujYHqP1qIU28ExM4oXQfzys/blad1```
 6. Hieruit ontvang je je json bestand en kan je beginnen met fetchen!
+
+## Features
 
 ## User Interface
 
@@ -38,9 +43,10 @@ https://benborgers.com/posts/google-sheets-json
 
 
 
-<!-- Add a link to your live demo in Github Pages 🌐-->
+<!-- Add a link to your live demo in Github Pages 🌐 CHECK-->
 
-<!-- ☝️ replace this description with a description of your own work -->
+
+<!-- ☝️ replace this description with a description of your own work CHECK-->
 
 <!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
 
@@ -48,11 +54,11 @@ https://benborgers.com/posts/google-sheets-json
 
 <!-- Maybe a table of contents here? 📚 -->
 
-<!-- How about a section that describes how to install this project? 🤓 -->
+<!-- How about a section that describes how to install this project? 🤓  CHECK-->
 
 <!-- ...but how does one use this project? What are its features 🤔 -->
 
-<!-- What external data source is featured in your project and what are its properties 🌠 -->
+<!-- What external data source is featured in your project and what are its properties 🌠 CHECK -->
 
 <!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
 
