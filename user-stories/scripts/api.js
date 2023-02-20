@@ -5,19 +5,24 @@ const deAuteur= element('h1')
 const deQuote = element ('p')
 const deButton = element ('button')
 
+//Loading state
+const display = document.querySelector('section')
+display.textContent = "Loading quotes, even geduld a.u.b :)"
+
 // Logica console logs
 // console.log(1)
 fetchData()
 
 // Fetchen van de API
-function fetchData (){
+const fetchData = () => {
     const url = 'https://opensheet.elk.sh/12nr4W-RHpvhnw76MCZZtujYHqP1qIU28ExM4oXQfzys/blad1' 
 // Hieronder zijn de functies (fetch.then.then) zijn aan elkaar 
 // gechaint = dit heet een method -> functie die in een object leeft
-const data = fetch(url)
+    const data = fetch(url)
             .then(response => response.json())
             .then(data => {
                 console.log(data)
+                // random quotes
                 var index = Math.floor(Math.random()*data.length)
                 console.log(index)
 
@@ -25,25 +30,29 @@ const data = fetch(url)
                 changeTitel(data[index].author);
                 changeQuote(data[index].quote);
             })
-
-}
+            //Loading state stoppen
+            .then(json => {
+                display.textContent="";
+            })
+        }
+        
 // Functions
-function element (element) {
+const element = (element) => {
     return document.querySelector(element)
 }
 // const div = element('div');
 
-function elements (elements) {
+const elements = (elements) => {
     return document.querySelector(elements)
 }
 
-function changeTitel (data) {
+const changeTitel = (data) => {
     console.log(data)
     const text = data
     deAuteur.innerHTML = text
 }
 
-function changeQuote (data)  {
+const changeQuote = (data) => {
     console.log(data)
     const quote = data
     deQuote.innerHTML = quote
@@ -59,7 +68,7 @@ function changeQuote (data)  {
 
 
 
-//Random shit
+// Random manieren van fetchen waar ik mee heb geexperimenteerd
 // // Nummer 1
 // //fetchen
 // function fetchData (){

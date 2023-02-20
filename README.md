@@ -1,58 +1,41 @@
-# Web App From Scratch @cmda-minor-web 2021 - 2022
-hilal
-In this course you will learn to build a web application without frameworks or unnecessary libraries, but with vanilla HTML, CSS & JavaScript as much as possible. The end result is a modular, single page web app (SPA). Data will be retrieved from an external API, manipulated and finally shown in the UI of the App. You will learn to apply interface principles when building and testing the interface. With the gained knowledge you will be able to build interactive prototypes, based on a user story and real data. Also you will gain a better understanding of how API's, frameworks and libraries work.
+# Your Daily Web Quote (YDWQ)
+Your daily web quote is een browser based one page web project, ontworpen om quotes te bekijken die alles te maken hebben met het web. 
 
-## Assignment
+Of je nou een ux designer bent of een back-end developer, het maakt allemaal niet uit. De quotes kunnen voor iedereen van toepassing zijn!
 
-1. [Visitekaartje](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/week-1.md#1-visitekaartje): Ontwerp en maak met HTML, CSS en JS een visitekaartje.
+## Live Site Link!
+https://hilal-tapan.github.io/web-app-from-scratch-2223/user-stories/
 
-### Breakdownschets
-![breakdownschets](https://github.com/Hilal-Tapan/web-app-from-scratch-2223/blob/main/visitekaartje/images/breakdownschets.png)
+## Resources
+### Api
+We kregen een quotes api toegewezen vanuit de opdracht. Echter ging deze halverwege stuk waardoor we zelf een nieuwe api moesten maken.
 
-*  Section 1
-h1
-p
+Dit heb ik gedaan door middel van de tutorial van Ben Borgers. 
+1. Deze api is gebasseerd op een Google sheet waar ik data invul. 
+2. Vervolgens heb ik deze Google sheet gepubliceerd op het web.
+3. Hierna heb ik daar een Json bestand van gemaakt zodat ik het kon toepassen in de back-end.
+4. Hiervoor heb ik de API link gebruikt uit de tutorial:  https://opensheet.elk.sh/spreadsheet_id/tab_name
+5. Hier heb ik mijn id aan toegevoegd: https://opensheet.elk.sh/12nr4W-RHpvhnw76MCZZtujYHqP1qIU28ExM4oXQfzys/blad1
+6. Hierna ontvang je een json bestand en kan je beginnen met fetchen!
 
-*  Section 2
-img 
-img
+## User Interface
 
-*  Section 3
-h2
-
-*  Section 4
-img 
+## Bronnen
+https://github.com/benborgers/opensheet#readme
+https://benborgers.com/posts/google-sheets-json 
 
 
-2. [Squadpagina](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/week-1.md#2-squadpagina): Ontwerp en maak met je team een squadpagina waarin je de verschillende visitekaartjes toont.
-3. [Single Page App](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/master/course/week-2.md): Design and build a single page web app based on a User Story.
+## Assignments
+1. [Visitekaartje](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/week-1.md#1-visitekaartje): Link eindresultaat: https://hilal-tapan.github.io/web-app-from-scratch-2223/visitekaartje/
+
+2. [Squadpagina](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/week-1.md#2-squadpagina): Link eindresultaat: https://inevdhoven.github.io/web-app-from-scratch-2223/team/
+
+3. [Single Page App](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/master/course/week-2.md): Link eindresultaat:https://hilal-tapan.github.io/web-app-from-scratch-2223/user-stories/
 
 ---
 
-## Program
 
-| Planning | Maandag | Dinsdag | Vrijdag  |
-|---|---|---|---|
-| [Week 1 - Hellooo 🤸](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/master/course/week-1.md) | Introduction + visitekaartje | Squadpagina | Teambespreking |
-| [Week 2 - Hello API 🐒](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/master/course/week-2.md) | College + briefing opdracht | College + Work | Feedbackgesprekken |
-| Voorjaarsvakantie |  |  |  |
-| [Week 3 - Refactor 🛠](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/master/course/week-3.md)  | College + work  | College + work | Feedbackgesprekken  |
-| [Week 4 - Wrapping up 🎁](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/master/course/week-4.md)  | College + work  | Review + work | Beoordelingsgesprekken  |
 
-## Best Practices
-
-All work during this course will be tested against our [Best Practices for JavaScript](https://github.com/cmda-minor-web/best-practices/blob/master/javascript.md).
-
-## Rubric
-
-Your efforts will be graded using a single point rubric (see below). You will have to pass the criterion (centre column) to pass the course. During the test you will be consulted and will be given feedback on things we think deficient and things we think are an improvement on the criterion.
-
-| Deficiency | Criterion | Improvement |
-|:--|:--|:--|
-|  | *User Interface* - you design, build and test the user interface by applying interface design principles |  |
-|  | *Code structure* - you write modular, consistent and efficient HTML, CSS and JavaScript code by applying structure and best practices. You manage state for the application and the UI |  |
-|  | *Data management* - you understand how you can work with an external API using asynchronous code. You can retrieve data, manipulate and dynamically convert it to structured html |  |
-|  | *Project* - your app is working and published on GitHub Pages. Your project is thoroughly documented in the `README.md` file in your repository.  |  |
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
 
