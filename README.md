@@ -15,9 +15,12 @@ We kregen een quotes api toegewezen vanuit de opdracht. Echter ging deze halverw
 
 ### Stappenplan
 Dit heb ik gedaan door middel van de [tutorial](https://github.com/benborgers/opensheet#readme) van Ben Borgers. 
-1. Deze api is gebasseerd op een Google sheet waar ik data invul. 
-2. Vervolgens heb ik deze Google sheet gepubliceerd op het web.
-3. Hierna heb ik daar een Json bestand van gemaakt zodat ik het kon toepassen in de back-end.
+1. De api is gebasseerd op een Google sheet die ik aanmaak en vervolgens data invul. 
+2. Daarna heb ik deze Google sheet gepubliceerd op het web.
+3. Hierna heb ik er een Json bestand van gemaakt zodat ik het kon toepassen in de back-end.
+
+![Voorbeeld](https://github.com/Hilal-Tapan/web-app-from-scratch-2223/blob/main/user-stories/images/ben-borgers.png)
+
 4. Hiervoor heb ik de API link gebruikt uit de tutorial:  ```https://opensheet.elk.sh/spreadsheet_id/tab_name```
 5. Hier heb ik mijn id aan toegevoegd van me Google web sheet: ```https://opensheet.elk.sh/12nr4W-RHpvhnw76MCZZtujYHqP1qIU28ExM4oXQfzys/blad1```
 6. Hieruit ontvang je je json bestand en kan je beginnen met fetchen!
