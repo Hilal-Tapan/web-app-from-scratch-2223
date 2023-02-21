@@ -1,0 +1,14 @@
+section {
+    display:none;
+}
+section.active {
+    display: block;
+}
+
+#home.active {
+    background:blue;
+}
+
+#about.active {
+    background:yellow;
+}

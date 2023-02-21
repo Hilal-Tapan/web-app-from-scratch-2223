@@ -1,50 +1,12 @@
 // API
-
-// Variabelen
-const deAuteur= element('h1')
-const deQuote = element ('p')
-const deButton = element ('button')
-
-//Loading state
-const display = document.querySelector('section')
-display.textContent = "Loading quotes, even geduld a.u.b :)"
-
-// Logica console logs
-// console.log(1)
-fetchData()
-
-// Fetchen van de API
-const fetchData = () => {
-    const url = 'https://opensheet.elk.sh/12nr4W-RHpvhnw76MCZZtujYHqP1qIU28ExM4oXQfzys/blad1' 
-// Hieronder zijn de functies (fetch.then.then) zijn aan elkaar 
-// gechaint = dit heet een method -> functie die in een object leeft
-    const data = fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                console.log(data)
-                // random quotes
-                var index = Math.floor(Math.random()*data.length)
-                console.log(index)
-
-                // data veranderen
-                changeTitel(data[index].author);
-                changeQuote(data[index].quote);
-            })
-            //Loading state stoppen
-            .then(json => {
-                display.textContent="";
-            })
-        }
-        
 // Functions
 const element = (element) => {
     return document.querySelector(element)
 }
-// const div = element('div');
 
-const elements = (elements) => {
-    return document.querySelector(elements)
-}
+// const elements = (elements) => {
+//     return document.querySelector(elements)
+// }
 
 const changeTitel = (data) => {
     console.log(data)
@@ -58,17 +20,58 @@ const changeQuote = (data) => {
     deQuote.innerHTML = quote
 }
 
+// Variabelen
+const deAuteur= element('h1')
+const deQuote = element ('p')
+const deButton = element ('button')
+
 //Button om te klikken voor random data
- deButton.addEventListener("click", () => {
-     console.log("klik")
-    fetchData()
+deButton.addEventListener("click", () => {
+    console.log("klik")
+   fetchData()
 })
 
+//Loading state
+// const display = document.querySelector('section')
+// display.textContent = "Loading quotes, even geduld a.u.b :)"
+
+// Fetchen van de API
+export const fetchData = () => {
+    const url = 'https://opensheet.elk.sh/12nr4W-RHpvhnw76MCZZtujYHqP1qIU28ExM4oXQfzys/blad1' 
+// Hieronder zijn de functies (fetch.then.then) zijn aan elkaar 
+// gechaint = dit heet een method -> functie die in een object leeft
+    const data = fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                // random quotes genereren
+                var index = Math.floor(Math.random()*data.length)
+                console.log(index)
+
+                // data veranderen
+                changeTitel(data[index].author);
+                changeQuote(data[index].quote);
+            })
+            //Loading state stoppen
+            // .then(json => {
+            //     display.textContent="";
+            // })
+        }
+        
 
 
 
+
+
+
+
+
+
+
+        
 
 // Random manieren van fetchen waar ik mee heb geexperimenteerd
+
 // // Nummer 1
 // //fetchen
 // function fetchData (){
