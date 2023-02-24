@@ -1,4 +1,6 @@
 // API
+import { loading } from './states.js'
+
 // Functions
 const element = (element) => {
     return document.querySelector(element)
@@ -29,11 +31,17 @@ const deButton = element ('button')
 deButton.addEventListener("click", () => {
     console.log("klik")
    fetchData()
+   deButton.toggleAttribute("disabled")
+   deButton.innerHTML = 'loading'
+   console.log(deButton)
+
+
 })
 
 //Loading state
-// const display = document.querySelector('section')
+// const display = document.querySelector('#loading')
 // display.textContent = "Loading quotes, even geduld a.u.b :)"
+
 
 // Fetchen van de API
 export const fetchData = () => {
@@ -43,22 +51,49 @@ export const fetchData = () => {
     const data = fetch(url)
             .then(response => response.json())
             .then(data => {
+                loading()
                 console.log(data)
+
                 // random quotes genereren
                 var index = Math.floor(Math.random()*data.length)
                 console.log(index)
 
+
+                // ook progressive enhancement
+                setTimeout(() => {
+                    // loader.classList.remove('display')
+                    loading()
+                    // data veranderen
+                    changeTitel(data[index].author);
+                    changeQuote(data[index].quote);
+        
+                }, 1000)
+            
                 // data veranderen
-                changeTitel(data[index].author);
-                changeQuote(data[index].quote);
+                // changeTitel(data[index].author);
+                // changeQuote(data[index].quote);
+
             })
+}
             //Loading state stoppen
             // .then(json => {
             //     display.textContent="";
             // })
-        }
-        
 
+            // }
+
+        //      // function loading(state) {
+        // const loader = document.querySelector('svg.loader')
+        // if (state == 'on') {
+        //    loader.classList.add(state)
+        // } else {
+        //     loader.classList.remove(state)
+        // }
+        
+    
+
+
+        //empty error en loading state moeten erin
 
 
 

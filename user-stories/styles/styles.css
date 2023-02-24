@@ -12,3 +12,11 @@ section.active {
 #about.active {
     background:yellow;
 }
+
+#loader {
+    display: none;
+}
+
+#loader.display {
+    display: block;
+}

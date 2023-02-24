@@ -7,6 +7,8 @@ export function router() {
 
         var homeSection = document.querySelector('#home')
         var aboutSection = document.querySelector('#about')
+
+
         console.log('hash has changed', hash) 
 
         //remove active class
@@ -16,34 +18,39 @@ export function router() {
         }
 
         switch (hash) {
-            case "#quotes":
-                // homeSection.innerHTML=''
-                //add class
-                homeSection.classList.add('active')
-                console.log(active)
-             break;
+            // case "#loading":
+            //     loadingSection.classList.add('active') //adds class
+            //     console.log(active)
+            //  break;
 
              case "#home":
-                // homeSection.innerHTML=''
-                //add class
-                
-                homeSection.classList.add('active')
+                // homeSection.innerHTML=''                
+                homeSection.classList.add('active') //adds class
                 console.log(active)
              break;
          
             case "#about":
                 // aboutSection.innerHTML='' 
-                 //add class
-                aboutSection.classList.add('active')
+                aboutSection.classList.add('active') //adds class
                 console.log(active)
              break;
  
-            default:
-             section.innerHTML = '<h1>404 - Page Not Found</h1>';
-            break;
+            // default:
+            //  errorSection.innerHTML = '<h1>404 - Page Not Found</h1>';
+            // break;
         }
     }, false);
 }
+
+
+
+
+
+
+
+
+
+
 
             //  section.insertAdjacentHTML('afterbegin' , '<h1>hi</h1>')
              // insertAdjacentHTML heeft 4 properties die je als eerst kan aangeven.
