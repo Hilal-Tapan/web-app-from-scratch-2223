@@ -1,5 +1,6 @@
 // API
-import { loading } from './states.js'
+import { stopLoading, startLoading } from './states.js'
+import { handleFetchError } from './states.js'
 
 // Functions
 const element = (element) => {
@@ -9,6 +10,7 @@ const element = (element) => {
 // const elements = (elements) => {
 //     return document.querySelector(elements)
 // }
+
 
 const changeTitel = (data) => {
     console.log(data)
@@ -31,9 +33,10 @@ const deButton = element ('button')
 deButton.addEventListener("click", () => {
     console.log("klik")
    fetchData()
-   deButton.toggleAttribute("disabled")
-   deButton.innerHTML = 'loading'
-   console.log(deButton)
+
+   startLoading()
+
+   
 
 
 })
@@ -86,25 +89,20 @@ deButton.addEventListener("click", () => {
 // }
 
 export const fetchData = () => {
-    // const url = 'https://opensheet.elk.sh/12nr4W-RHpvhnw76MCZZtujYHqP1qIU28ExM4oXQfzys/blad1';
-    const url = 'https://opensheet.elk.sh/12nr4W-RHpvhnw7jdfhdhdf6MCZZtujYHqP1qIU28ExM4oXQfzys/blad1';
-  
-    const handleFetchError = (error) => {
-      console.error(error);
-      deQuote.innerHTML = "failed to load quotes"
-      // Do something to handle the error, e.g. display an error message to the user
-    };
-  
-    const data = fetch(url)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
-        }
-        return response.json();
-      })
+    const url = 'https://opensheet.elk.sh/12nr4W-RHpvhnw76MCZZtujYHqP1qIU28ExM4oXQfzys/blad1';
+    // const url = 'https://opensheet.elk.sh/12nr4W-RHpvhnw7jdfhdhdf6MCZZtujYHqP1qIU28ExM4oXQfzys/blad1';
 
-      .then((data) => {
-        loading();
+    const data = fetch(url)
+    
+    .then(response => response.json())
+
+    .then((data) => {
+        // Deze voor als hij kan fetchen maar niks binnen haalt -robert
+        if(data.error) {
+            handleFetchError(deQuote, data.error);
+            return;
+        }
+
         console.log(data);
   
         // random quotes genereren
@@ -113,8 +111,9 @@ export const fetchData = () => {
   
         // Loading state + progressive enhancement
         setTimeout(() => {
-          // loader.classList.remove('display')
-          loading();
+        //   loader.classList.remove('display')
+          stopLoading();
+
           // data veranderen
           changeTitel(data[index].author);
           changeQuote(data[index].quote);
@@ -124,12 +123,17 @@ export const fetchData = () => {
         // changeTitel(data[index].author);
         // changeQuote(data[index].quote);
       })
-      .catch(handleFetchError);
+      // error state 
+      .catch(err => {
+        //   console.log(deQuote)
+        //   console.log('failed')
+          handleFetchError(deQuote, err);
+      });
   };
   
 
 
-            //Loading state stoppen
+            // //Loading state stoppen
             // .then(json => {
             //     display.textContent="";
             // })
