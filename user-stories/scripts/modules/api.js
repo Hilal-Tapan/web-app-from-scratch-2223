@@ -42,39 +42,93 @@ deButton.addEventListener("click", () => {
 // const display = document.querySelector('#loading')
 // display.textContent = "Loading quotes, even geduld a.u.b :)"
 
+// function handleFetchError(response) {
+//     if (!response.ok) {
+//       throw new Error(`Failed to fetch API: ${response.status} ${response.statusText}`);
+//     }
+//     return response.json();
+//   }
+// // Fetchen van de API
+// export const fetchData = () => {
+//     const url = 'https://opensheet.elk.sh/12nr4W-RHpvhnw76MCZZtujYHqP1qIU28ExM4oXQfzys/blad1' 
+// // Hieronder zijn de functies (fetch.then.then) zijn aan elkaar 
+// // gechaint = dit heet een method -> functie die in een object leeft
+//     const data = fetch(url)
+//             .then(response => response.json())
+//             .then(data => {
+//                 loading()
+//                 console.log(data)
 
-// Fetchen van de API
-export const fetchData = () => {
-    const url = 'https://opensheet.elk.sh/12nr4W-RHpvhnw76MCZZtujYHqP1qIU28ExM4oXQfzys/blad1' 
-// Hieronder zijn de functies (fetch.then.then) zijn aan elkaar 
-// gechaint = dit heet een method -> functie die in een object leeft
-    const data = fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                loading()
-                console.log(data)
+//                 // random quotes genereren
+//                 var index = Math.floor(Math.random()*data.length)
+//                 console.log(index)
 
-                // random quotes genereren
-                var index = Math.floor(Math.random()*data.length)
-                console.log(index)
-
-
-                // ook progressive enhancement
-                setTimeout(() => {
-                    // loader.classList.remove('display')
-                    loading()
-                    // data veranderen
-                    changeTitel(data[index].author);
-                    changeQuote(data[index].quote);
+//                 // Loading state + progressive enhancement
+//                 setTimeout(() => {
+//                     // loader.classList.remove('display')
+//                     loading()
+//                     // data veranderen
+//                     changeTitel(data[index].author);
+//                     changeQuote(data[index].quote);
         
-                }, 1000)
-            
-                // data veranderen
-                // changeTitel(data[index].author);
-                // changeQuote(data[index].quote);
+//                 }, 1000)
 
-            })
-}
+                
+            
+//                 // data veranderen oude plek
+//                 // changeTitel(data[index].author);
+//                 // changeQuote(data[index].quote);
+
+//             })
+//             // .catch(error => {
+//             //     handleFetchError()
+//             //   })
+// }
+
+export const fetchData = () => {
+    // const url = 'https://opensheet.elk.sh/12nr4W-RHpvhnw76MCZZtujYHqP1qIU28ExM4oXQfzys/blad1';
+    const url = 'https://opensheet.elk.sh/12nr4W-RHpvhnw7jdfhdhdf6MCZZtujYHqP1qIU28ExM4oXQfzys/blad1';
+  
+    const handleFetchError = (error) => {
+      console.error(error);
+      deQuote.innerHTML = "failed to load quotes"
+      // Do something to handle the error, e.g. display an error message to the user
+    };
+  
+    const data = fetch(url)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
+        }
+        return response.json();
+      })
+
+      .then((data) => {
+        loading();
+        console.log(data);
+  
+        // random quotes genereren
+        const index = Math.floor(Math.random() * data.length);
+        console.log(index);
+  
+        // Loading state + progressive enhancement
+        setTimeout(() => {
+          // loader.classList.remove('display')
+          loading();
+          // data veranderen
+          changeTitel(data[index].author);
+          changeQuote(data[index].quote);
+        }, 1000);
+  
+        // data veranderen oude plek
+        // changeTitel(data[index].author);
+        // changeQuote(data[index].quote);
+      })
+      .catch(handleFetchError);
+  };
+  
+
+
             //Loading state stoppen
             // .then(json => {
             //     display.textContent="";
@@ -94,13 +148,6 @@ export const fetchData = () => {
 
 
         //empty error en loading state moeten erin
-
-
-
-
-
-
-
 
 
         
