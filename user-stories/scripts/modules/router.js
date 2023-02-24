@@ -23,7 +23,7 @@ export function router() {
                 console.log(active)
              break;
 
-             case "#quotes/:id":
+             case "#home":
                 // homeSection.innerHTML=''
                 //add class
                 
