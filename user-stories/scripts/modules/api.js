@@ -35,11 +35,76 @@ deButton.addEventListener("click", () => {
    fetchData()
 
    startLoading()
-
-   
-
-
 })
+
+
+export const fetchData = () => {
+    const url = 'https://opensheet.elk.sh/12nr4W-RHpvhnw76MCZZtujYHqP1qIU28ExM4oXQfzys/blad1';
+    // const url = 'https://opensheet.elk.sh/12nr4W-RHpvhnw7jdfhdhdf6MCZZtujYHqP1qIU28ExM4oXQfzys/blad1';
+
+    const data = fetch(url)
+    
+    .then(response => response.json())
+
+    .then((data) => {
+        // Deze voor als hij kan fetchen maar niks binnen haalt -robert
+        if(data.error) {
+            handleFetchError(deQuote, data.error);
+            return;
+        }
+
+        console.log(data);
+  
+        // random quotes genereren
+        const index = Math.floor(Math.random() * data.length);
+        console.log(index);
+  
+        // Loading state + progressive enhancement
+        setTimeout(() => {
+        //   loader.classList.remove('display')
+          stopLoading();
+
+          // data veranderen
+          changeTitel(data[index].author);
+          changeQuote(data[index].quote);
+        }, 1000);
+  
+        // data veranderen oude plek
+        // changeTitel(data[index].author);
+        // changeQuote(data[index].quote);
+      })
+      // error state 
+      .catch(err => {
+        //   console.log(deQuote)
+        //   console.log('failed')
+          handleFetchError(deQuote, err);
+      });
+  };
+  
+
+  
+
+
+            // //Loading state stoppen
+            // .then(json => {
+            //     display.textContent="";
+            // })
+
+            // }
+
+        //      // function loading(state) {
+        // const loader = document.querySelector('svg.loader')
+        // if (state == 'on') {
+        //    loader.classList.add(state)
+        // } else {
+        //     loader.classList.remove(state)
+        // }
+        
+    
+
+
+        //empty error en loading state moeten erin
+
 
 //Loading state
 // const display = document.querySelector('#loading')
@@ -87,72 +152,6 @@ deButton.addEventListener("click", () => {
 //             //     handleFetchError()
 //             //   })
 // }
-
-export const fetchData = () => {
-    const url = 'https://opensheet.elk.sh/12nr4W-RHpvhnw76MCZZtujYHqP1qIU28ExM4oXQfzys/blad1';
-    // const url = 'https://opensheet.elk.sh/12nr4W-RHpvhnw7jdfhdhdf6MCZZtujYHqP1qIU28ExM4oXQfzys/blad1';
-
-    const data = fetch(url)
-    
-    .then(response => response.json())
-
-    .then((data) => {
-        // Deze voor als hij kan fetchen maar niks binnen haalt -robert
-        if(data.error) {
-            handleFetchError(deQuote, data.error);
-            return;
-        }
-
-        console.log(data);
-  
-        // random quotes genereren
-        const index = Math.floor(Math.random() * data.length);
-        console.log(index);
-  
-        // Loading state + progressive enhancement
-        setTimeout(() => {
-        //   loader.classList.remove('display')
-          stopLoading();
-
-          // data veranderen
-          changeTitel(data[index].author);
-          changeQuote(data[index].quote);
-        }, 1000);
-  
-        // data veranderen oude plek
-        // changeTitel(data[index].author);
-        // changeQuote(data[index].quote);
-      })
-      // error state 
-      .catch(err => {
-        //   console.log(deQuote)
-        //   console.log('failed')
-          handleFetchError(deQuote, err);
-      });
-  };
-  
-
-
-            // //Loading state stoppen
-            // .then(json => {
-            //     display.textContent="";
-            // })
-
-            // }
-
-        //      // function loading(state) {
-        // const loader = document.querySelector('svg.loader')
-        // if (state == 'on') {
-        //    loader.classList.add(state)
-        // } else {
-        //     loader.classList.remove(state)
-        // }
-        
-    
-
-
-        //empty error en loading state moeten erin
-
 
         
 

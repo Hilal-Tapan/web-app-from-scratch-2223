@@ -1,22 +1,206 @@
-section {
-    display:none;
-}
-section.active {
-    display: block;
+
+/*--------------------------------------------------- ROOT --------------------------------------------------------*/
+:root {
+    --background-color-home: #484848;
+    --background-color-about: yellow;
+    --footer:white;
+
+    --text-home: white;
+    --text-about: black;
+    --nav-text:white;
+    --nav-fontsize:1.5em;
+    --button-color:#7BB3F4;
+  }
+
+/*-------------------------------------------------- STYLING ----------------------------------------------------*/
+body {
+    margin:0;
+    padding:0;
 }
 
-#home.active {
-    background:lightblue;
+main {
+    background-color: var(--background-color-home);
+    height: 170vw;
+    overflow-x: hidden;
+    position: relative
+
+}
+
+header{
+    background-color: var(--background-color-home);
+    padding: 1em 0 0 1em;
+}
+
+/* navigation */
+nav {
+    position: absolute;
+    top:2vw;
+    right:5vw;
+    z-index: 10000;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    border-bottom: solid .2em var(--background-color-about);
+    padding: 0 1em 0 1em;
+}
+
+nav ul li:hover{
+    border: solid .2em var(--background-color-about);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--nav-text);
+    font-size: var(--nav-fontsize);
+}
+
+
+/* Achtergrond balletjes */
+main ul {
+    margin: 0;
+    overflow-x:hidden;
+}
+
+main ul li {
+    position: absolute;
+    list-style: none;
+    width: 3em;
+    height: 3em;
+    border-radius: 3em;
+    background-color: white;
+}
+
+main ul li:nth-of-type(1) {
+    width: 18em;
+    height: 18em;
+    border-radius: 15em;
+    background-color:#BFBEBC;
+    top: 3em;
+    right: -6em;
+}
+
+main ul li:nth-of-type(2) {
+    width: 15em;
+    height: 15em;
+    border-radius: 10em;
+    background-color: #676566;
+    top: -4em;
+    right: -4em;
+}
+
+main ul li:nth-of-type(3) {
+    width: 13em;
+    height: 13em;
+    border-radius: 13em;
+    background-color: #BFBEBC;
+    top: 28em;
+    right: -5em;
+}
+
+main ul li:nth-of-type(4) {
+    width: 8em;
+    height: 8em;
+    border-radius: 8em;
+    background-color: #FFFF33;
+    top: 25em;
+    right: -3em;
+}
+
+main ul li:nth-of-type(5) {
+    width: 8em;
+    height: 8em;
+    border-radius: 8em;
+    background-color: #FFFF33;
+    left: -3em;
+    top: 15em;
+}
+
+/* de sections */
+section {
+    display:none;
+    z-index: 1000;
+}
+
+section.active {
+    display: block;
+    transform: translateX(8%) translateY(25%);
+}
+
+section:nth-of-type(1) div {
+    width: 60vw;
+    height: 60vw;
+    padding: 4em 3em 4em 3em;
+    background-color: var(--footer);
+    z-index: 10000;
+    text-align: center;
+    border-radius: 3em;
+}
+
+section:nth-of-type(1) button {
+    width: 60vw;
+    height: 15vw;;
+    background-color: var(--button-color);
+    border-radius: 3em;
+    color: var(--footer);
+    transform: translateX(19%);
+    margin-top: 2em;
+    border: none;
+    filter: drop-shadow(.2em .1em .2em #676566);
+}
+
+section:nth-of-type(1) button:hover {
+    background-color: #167DF5;
+}
+
+/* #home.active {
 }
 
 #about.active {
-    background:yellow;
+    color:white;
+}  */
+
+
+footer {
+    /* background-color: var(--footer); */
+    background-color: pink;
 }
 
-#loader {
+footer ul {
+    display: flex;
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+}
+
+footer ul li {
+    list-style: none;
+    padding: 0 .5em 0 .5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #loader {
     display: none;
 }
 
 #loader.display {
     display: block;
-}
+} */
