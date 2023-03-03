@@ -10,16 +10,33 @@
     --nav-text:white;
     --nav-fontsize:1.5em;
     --button-color:#7BB3F4;
+
+    --cirkel-lichtgrijs:#BFBEBC;
+    --cirkel-geel: #FFFF33;
+    --cirkel-donkergrijs:#676566;
   }
 
+
+  /* @font-face {
+	font-family: 'Soulcraft';
+	src: url('../fonts/Soulcraft.ttf');
+  } */
+
+  @import url('https://fonts.cdnfonts.com/css/soulcraft');
+
+                
+
 /*-------------------------------------------------- STYLING ----------------------------------------------------*/
+
 body {
     margin:0;
     padding:0;
+    background-color: var(--background-color-home);
+
 }
 
 main {
-    background-color: var(--background-color-home);
+    /* background-color: var(--background-color-home); */
     height: 170vw;
     overflow-x: hidden;
     position: relative
@@ -27,11 +44,12 @@ main {
 }
 
 header{
-    background-color: var(--background-color-home);
+    /* background-color: var(--background-color-home); */
+    background: none;
     padding: 1em 0 0 1em;
 }
 
-/* navigation */
+/*---------------------------------------------- navigation -------------------------------------------------------*/
 nav {
     position: absolute;
     top:2vw;
@@ -60,35 +78,52 @@ nav ul li a {
 }
 
 
-/* Achtergrond balletjes */
+/*---------------------------------------------- background cirkels -----------------------------------------------*/
 main ul {
     margin: 0;
-    overflow-x:hidden;
 }
 
 main ul li {
-    position: absolute;
+    position: fixed;
     list-style: none;
     width: 3em;
     height: 3em;
     border-radius: 3em;
-    background-color: white;
 }
 
 main ul li:nth-of-type(1) {
     width: 18em;
     height: 18em;
     border-radius: 15em;
-    background-color:#BFBEBC;
+    background-color:var(--cirkel-lichtgrijs);
     top: 3em;
     right: -6em;
+    animation-name: cirkel1;
+    transition-timing-function: ease-in-out;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+
+@keyframes cirkel1 {
+    0% {
+        transform: translateX(0%) translateY(0%);
+    }
+
+    50% {
+        transform: translateX(-70%) translateY(-100%);
+    }
+
+    100% {
+        transform: translateX(0%) translateY(0%);
+    }
 }
 
 main ul li:nth-of-type(2) {
     width: 15em;
     height: 15em;
     border-radius: 10em;
-    background-color: #676566;
+    background-color: var(--cirkel-donkergrijs);
     top: -4em;
     right: -4em;
 }
@@ -97,7 +132,7 @@ main ul li:nth-of-type(3) {
     width: 13em;
     height: 13em;
     border-radius: 13em;
-    background-color: #BFBEBC;
+    background-color: var(--cirkel-lichtgrijs);
     top: 28em;
     right: -5em;
 }
@@ -106,21 +141,95 @@ main ul li:nth-of-type(4) {
     width: 8em;
     height: 8em;
     border-radius: 8em;
-    background-color: #FFFF33;
+    background-color: var(--cirkel-geel);
     top: 25em;
-    right: -3em;
+    right: -3em;  
+    animation-name: cirkel2;
+    transition-timing-function: ease-in-out;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cirkel2 {
+    0% {
+        transform: translateX(0%) translateY(0%);
+    }
+
+    50% {
+        transform: translateX(00%) translateY(100%);
+    }
+
+    100% {
+        transform: translateX(0%) translateY(0%);
+    }
 }
 
 main ul li:nth-of-type(5) {
-    width: 8em;
-    height: 8em;
-    border-radius: 8em;
-    background-color: #FFFF33;
+    width: 6em;
+    height: 6em;
+    border-radius: 6em;
+    background-color: var(--cirkel-geel);
     left: -3em;
-    top: 15em;
+    top: 19em;
+    animation-name: cirkel3;
+    transition-timing-function: ease-in-out;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
 }
 
-/* de sections */
+@keyframes cirkel3 {
+    0% {
+        transform: translateX(0%) translateY(0%);
+    }
+
+    50% {
+        transform: translateX(20%) translateY(-100%);
+    }
+
+    100% {
+        transform: translateX(0%) translateY(0%);
+    }
+}
+
+main ul li:nth-of-type(6){
+    width: 15em;
+    height: 15em;
+    border-radius: 15em;
+    background-color: var(--cirkel-donkergrijs);
+    left: -6em;
+    bottom: -5em;
+}
+
+main ul li:nth-of-type(7) {
+    width: 7em;
+    height: 7em;
+    border-radius: 7em;
+    background-color: var(--cirkel-geel);
+    left: 4em;
+    bottom: -3em; 
+    animation-name: cirkel4;
+    transition-timing-function: ease-in-out;
+    animation-duration: 40s;
+    animation-iteration-count: infinite; 
+    animation-delay: 2s;
+}
+
+@keyframes cirkel4 {
+    0% {
+        transform: translateX(0%) translateY(0%);
+    }
+
+    50% {
+        transform: translateX(90%) translateY(-100%);
+    }
+
+    100% {
+        transform: translateX(0%) translateY(0%);
+    }
+}
+
+
+/*------------------------------------------------- section 1 -----------------------------------------------------*/
 section {
     display:none;
     z-index: 1000;
@@ -139,6 +248,24 @@ section:nth-of-type(1) div {
     z-index: 10000;
     text-align: center;
     border-radius: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+}
+
+section:nth-of-type(1)  h1 {
+    font-family: Soulcraft;
+    font-size: 2em;
+    letter-spacing: .2em;
+    margin: 0 0 .3em 0;
+}
+
+section:nth-of-type(1) p {
+    font-family: arial;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin: 0;
 }
 
 section:nth-of-type(1) button {
@@ -153,8 +280,28 @@ section:nth-of-type(1) button {
     filter: drop-shadow(.2em .1em .2em #676566);
 }
 
-section:nth-of-type(1) button:hover {
-    background-color: #167DF5;
+button:disabled,
+button[disabled]{
+    /* background-color: #167DF5; */
+    background-color: red;
+}
+
+section:nth-of-type(1) img {
+    width: 3em;
+    position: absolute;
+}
+
+section:nth-of-type(1) img:nth-of-type(1) {
+    top: 2em;
+    left: 2em;
+    transform: scaleX(-1);
+}
+
+section:nth-of-type(1) img:nth-of-type(2) {
+    bottom: 7em;
+    right: 6em;
+    transform: rotate(360deg);
+    transform: scaleY(-1);
 }
 
 /* #home.active {
@@ -165,9 +312,12 @@ section:nth-of-type(1) button:hover {
 }  */
 
 
+/*---------------------------------------------------- footer -------------------------------------------------------*/
 footer {
     /* background-color: var(--footer); */
-    background-color: pink;
+    background-color: white;
+    height: 6em;
+    z-index: 10000;
 }
 
 footer ul {
