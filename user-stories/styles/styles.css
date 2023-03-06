@@ -31,14 +31,15 @@ body {
     margin:0;
     padding:0;
     background-color: var(--background-color-home);
-
 }
 
 main {
     /* background-color: var(--background-color-home); */
     height: 170vw;
     overflow-x: hidden;
-    position: relative
+    position: relative;
+    max-width: 414px;
+    max-height: 896px;
 
 }
 
@@ -239,7 +240,8 @@ section {
 }
 
 section.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
     transform: translateX(8%) translateY(25%);
 }
 
