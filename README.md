@@ -31,6 +31,9 @@ Dit heb ik gedaan door middel van de [tutorial](https://github.com/benborgers/op
 ## User Interface
 ![Mobile version](https://github.com/Hilal-Tapan/web-app-from-scratch-2223/blob/main/user-stories/images/Interface.png)
 
+## License
+Dit project heeft een MIT License - zie de license file voor meer details.
+
 ## Bronnen
 * https://github.com/benborgers/opensheet#readme
 * https://benborgers.com/posts/google-sheets-json 
