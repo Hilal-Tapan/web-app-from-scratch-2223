@@ -4,13 +4,23 @@ Your daily web quote is een browser based one page web project, ontworpen om quo
 
 Of je nou een ux designer bent of een back-end developer, het maakt allemaal niet uit. De quotes kunnen voor iedereen van toepassing zijn!
 
+## Gebruikte Technologiën
+* HTML5
+* CSS3
+* JavaScript
+* Google sheet API
+
 ## Live Site Link!
 https://hilal-tapan.github.io/web-app-from-scratch-2223/user-stories/
 
 ## Installatie
-Clonen naar je computer ```git clone https://github.com/Hilal-Tapan/web-app-from-scratch-2223.git```
+1. Clonen naar je computer 
+```$ git clone https://github.com/Hilal-Tapan/web-app-from-scratch-2223.git```
 
-## External data source
+2. Open de index.html file in je browser of gebruik localhost
+
+
+## External Data Source
 ### Api
 We kregen een quotes api toegewezen vanuit de opdracht. Echter ging deze halverwege stuk waardoor we zelf een nieuwe api moesten maken.
 
@@ -26,8 +36,6 @@ Dit heb ik gedaan door middel van de [tutorial](https://github.com/benborgers/op
 5. Hier heb ik mijn id aan toegevoegd van me Google web sheet: ```https://opensheet.elk.sh/12nr4W-RHpvhnw76MCZZtujYHqP1qIU28ExM4oXQfzys/blad1```
 6. Hieruit ontvang je je json bestand en kan je beginnen met fetchen!
 
-## Features
-
 ## User Interface
 ![Mobile version](https://github.com/Hilal-Tapan/web-app-from-scratch-2223/blob/main/user-stories/images/Interface.png)
 
@@ -39,7 +47,7 @@ Dit project heeft een MIT License - zie de license file voor meer details.
 * https://benborgers.com/posts/google-sheets-json 
 
 
-## Assignments
+## Assignment Links
 1. [Visitekaartje](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/week-1.md#1-visitekaartje): Link eindresultaat: https://hilal-tapan.github.io/web-app-from-scratch-2223/visitekaartje/
 
 2. [Squadpagina](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/week-1.md#2-squadpagina): Link eindresultaat: https://inevdhoven.github.io/web-app-from-scratch-2223/team/
