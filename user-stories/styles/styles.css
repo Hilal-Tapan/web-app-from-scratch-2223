@@ -8,19 +8,17 @@
     --text-home: white;
     --text-about: black;
     --nav-text:white;
-    --nav-fontsize:1.5em;
+    --nav-fontsize:1.3em;
     --button-color:#7BB3F4;
 
     --cirkel-lichtgrijs:#BFBEBC;
     --cirkel-geel: #FFFF33;
     --cirkel-donkergrijs:#676566;
+    --inline-shadow:pink;
+    --drop-shadow:black;
   }
 
 
-  /* @font-face {
-	font-family: 'Soulcraft';
-	src: url('../fonts/Soulcraft.ttf');
-  } */
 
   @import url('https://fonts.cdnfonts.com/css/soulcraft');
 
@@ -59,6 +57,7 @@ nav {
 
 nav ul {
     display: flex;
+    margin-top: 2em;
 }
 
 nav ul li {
@@ -75,6 +74,7 @@ nav ul li a {
     text-decoration: none;
     color: var(--nav-text);
     font-size: var(--nav-fontsize);
+    font-family: Arial;
 }
 
 
@@ -89,6 +89,8 @@ main ul li {
     width: 3em;
     height: 3em;
     border-radius: 3em;
+    box-shadow: inset 1em 1em 1em var(--inline-shadow),
+    0 8px 6px -6px var(--drop-shadow);
 }
 
 main ul li:nth-of-type(1) {
@@ -278,12 +280,14 @@ section:nth-of-type(1) button {
     margin-top: 2em;
     border: none;
     filter: drop-shadow(.2em .1em .2em #676566);
+    font-family: Soulcraft;
+    font-size: 1.2em;
+    letter-spacing: .3em;
+    text-shadow:.15em .1em .1em black ;
 }
 
-button:disabled,
-button[disabled]{
-    /* background-color: #167DF5; */
-    background-color: red;
+section:nth-of-type(1) button:disabled{
+    background-color: pink;
 }
 
 section:nth-of-type(1) img {
@@ -311,10 +315,39 @@ section:nth-of-type(1) img:nth-of-type(2) {
     color:white;
 }  */
 
+/*------------------------------------------------- section 2 -----------------------------------------------------*/
+section:nth-of-type(2) div {
+    width: 60vw;
+    height: 80vw;
+    padding: 4em 3em 4em 3em;
+    background-color: var(--drop-shadow);
+    z-index: 10000;
+    text-align: center;
+    border-radius: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+}
+
+section:nth-of-type(2)  h1 {
+    font-family: Soulcraft;
+    font-size: 2em;
+    letter-spacing: .2em;
+    margin: 0 0 .3em 0;
+    color: var(--footer);
+}
+
+section:nth-of-type(2) p {
+    font-family: arial;
+    font-size: 1.2em;
+    line-height: 1.3em;
+    margin: 0;
+    color: var(--footer);
+}
 
 /*---------------------------------------------------- footer -------------------------------------------------------*/
 footer {
-    /* background-color: var(--footer); */
     background-color: white;
     height: 6em;
     z-index: 10000;
@@ -323,7 +356,7 @@ footer {
 footer ul {
     display: flex;
     position: absolute;
-    bottom: 1em;
+    bottom: 0em;
     right: 1em;
 }
 
@@ -332,6 +365,9 @@ footer ul li {
     padding: 0 .5em 0 .5em;
 }
 
+footer img {
+    width: 2.5em;
+}
 
 
 

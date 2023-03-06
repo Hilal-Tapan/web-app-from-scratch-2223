@@ -2,6 +2,11 @@
 export function router() {
     // defineer de section waarin je de content wilt weergeven.
 
+    if(window.location.hash === "") {
+        window.location.hash = "home";
+
+    }
+
     window.addEventListener('hashchange', function(){
         const hash = window.location.hash;
 
