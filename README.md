@@ -1,3 +1,4 @@
+# 👋🏼 Your Daily Web Quote 👋🏼
 ![Logo](https://github.com/Hilal-Tapan/web-app-from-scratch-2223/blob/main/user-stories/images/Middel%202.png)
 
 Your daily web quote is a browser based one page web project, designed to view quotes related to the web.
@@ -6,12 +7,12 @@ Whether you are a ux designer or a back-end developer, it doesn't matter. The qu
 
 *** 
 
-## Live Site Link!
+## 👁️ Live Site Link! 👁️
 https://hilal-tapan.github.io/web-app-from-scratch-2223/user-stories/
 
 ***
 
-## Used Technologies
+## 🛠️ Used Technologies 🛠️
 * HTML5
 * CSS3
 * JavaScript
@@ -19,7 +20,7 @@ https://hilal-tapan.github.io/web-app-from-scratch-2223/user-stories/
 
 ***
 
-## Installation
+## 💻  Installation 💻 
 1. Clone to your computer
 ```$ git clone https://github.com/Hilal-Tapan/web-app-from-scratch-2223.git```
 
@@ -27,12 +28,12 @@ https://hilal-tapan.github.io/web-app-from-scratch-2223/user-stories/
 
 ***
 
-## External Data Source API
+## 💾  External Data Source API 💾 
 We were assigned a quotes api from the command. However, it broke halfway through, so we made a new API ourselves. Click [here](https://github.com/Hilal-Tapan/web-app-from-scratch-2223/wiki/Google-Sheet-API) to read more about that.
 
 *** 
 
-## Features
+## 🔎 Features 🔎
 There are a few features in this app. The user can:
 * Read random quotes from different writers
 * Shuffle through the random quotes
@@ -40,12 +41,12 @@ There are a few features in this app. The user can:
 
 ***
 
-## License
+## 📄  License 📄 
 This project has a MIT License - see the license file for more details.
 
 ***
 
-## Sources
+## 	📁 Sources 	📁
 * https://github.com/benborgers/opensheet#readme
 * https://benborgers.com/posts/google-sheets-json 
 * https://chat.openai.com/chat 
