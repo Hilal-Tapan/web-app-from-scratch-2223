@@ -34,17 +34,13 @@ body {
 }
 
 main {
-    /* background-color: var(--background-color-home); */
     height: 170vw;
     overflow-x: hidden;
     position: relative;
-    max-width: 414px;
-    max-height: 896px;
 
 }
 
 header{
-    /* background-color: var(--background-color-home); */
     background: none;
     padding: 1em 0 0 1em;
 }

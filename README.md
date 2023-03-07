@@ -1,51 +1,57 @@
 ![Logo](https://github.com/Hilal-Tapan/web-app-from-scratch-2223/blob/main/user-stories/images/Middel%202.png)
 
-Your daily web quote is een browser based one page web project, ontworpen om quotes te bekijken die alles te maken hebben met het web. 
+Your daily web quote is a browser based one page web project, designed to view quotes related to the web.
 
-Of je nou een ux designer bent of een back-end developer, het maakt allemaal niet uit. De quotes kunnen voor iedereen van toepassing zijn!
+Whether you are a ux designer or a back-end developer, it doesn't matter. The quotes can apply to all jobs in the web field!
 
-## Gebruikte Technologiën
+*** 
+
+## Live Site Link!
+https://hilal-tapan.github.io/web-app-from-scratch-2223/user-stories/
+
+***
+
+## Used Technologies
 * HTML5
 * CSS3
 * JavaScript
 * Google sheet API
 
-## Live Site Link!
-https://hilal-tapan.github.io/web-app-from-scratch-2223/user-stories/
+***
 
-## Installatie
-1. Clonen naar je computer 
+## Installation
+1. Clone to your computer
 ```$ git clone https://github.com/Hilal-Tapan/web-app-from-scratch-2223.git```
 
-2. Open de index.html file in je browser of gebruik localhost
+2. Open the index.html file in your browser or use localhost
 
+***
 
-## External Data Source
-### Api
-We kregen een quotes api toegewezen vanuit de opdracht. Echter ging deze halverwege stuk waardoor we zelf een nieuwe api moesten maken.
+## External Data Source API
+We were assigned a quotes api from the command. However, it broke halfway through, so we made a new API ourselves. Click [here](https://github.com/Hilal-Tapan/web-app-from-scratch-2223/wiki/Google-Sheet-API) to read more about that.
 
-### Stappenplan
-Dit heb ik gedaan door middel van de [tutorial](https://github.com/benborgers/opensheet#readme) van Ben Borgers. 
-1. De api is gebasseerd op een Google sheet die ik aanmaak en vervolgens data invul. 
-2. Daarna heb ik deze Google sheet gepubliceerd op het web.
-3. Hierna heb ik er een Json bestand van gemaakt zodat ik het kon toepassen in de back-end.
+*** 
 
-![Voorbeeld](https://github.com/Hilal-Tapan/web-app-from-scratch-2223/blob/main/user-stories/images/ben-borgers.png)
+## Features
+There are a few features in this app. The user can:
+* Read random quotes from different writers
+* Shuffle through the random quotes
+* Use dark/ light mode
 
-4. Hiervoor heb ik de API link gebruikt uit de tutorial:  ```https://opensheet.elk.sh/spreadsheet_id/tab_name```
-5. Hier heb ik mijn id aan toegevoegd van me Google web sheet: ```https://opensheet.elk.sh/12nr4W-RHpvhnw76MCZZtujYHqP1qIU28ExM4oXQfzys/blad1```
-6. Hieruit ontvang je je json bestand en kan je beginnen met fetchen!
-
-## User Interface
-![Mobile version](https://github.com/Hilal-Tapan/web-app-from-scratch-2223/blob/main/user-stories/images/Interface.png)
+***
 
 ## License
-Dit project heeft een MIT License - zie de license file voor meer details.
+This project has a MIT License - see the license file for more details.
 
-## Bronnen
+***
+
+## Sources
 * https://github.com/benborgers/opensheet#readme
 * https://benborgers.com/posts/google-sheets-json 
+* https://chat.openai.com/chat 
+* https://github.com/cmda-minor-web/web-app-from-scratch-2223 
 
+***
 
 ## Assignment Links
 1. [Visitekaartje](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/week-1.md#1-visitekaartje): Link eindresultaat: https://hilal-tapan.github.io/web-app-from-scratch-2223/visitekaartje/
