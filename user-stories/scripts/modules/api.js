@@ -1,17 +1,13 @@
-// API
+// Importeer functies uit andere JavaScript-bestanden
 import { stopLoading, startLoading } from './states.js'
 import { handleFetchError } from './states.js'
 
-// Functions
+// Functie om elementen in de HTML te vinden
 const element = (element) => {
     return document.querySelector(element)
 }
 
-// const elements = (elements) => {
-//     return document.querySelector(elements)
-// }
-
-
+// Zet de bijbehorende api gegevens in de HTML elementen
 const changeTitel = (data) => {
     console.log(data)
     const text = data
@@ -24,86 +20,88 @@ const changeQuote = (data) => {
     deQuote.innerHTML = quote
 }
 
-// Variabelen
-const deAuteur= element('h1')
-const deQuote = element ('p')
-const deButton = element ('button')
+// Variabelen om HTML-elementen te vinden
+const deAuteur = element('h1')
+const deQuote = element('p')
+const deButton = element('button')
 
 //Button om te klikken voor random data
+// Voegt een eventlistener toe aan de knop om nieuwe data op te halen
 deButton.addEventListener("click", () => {
     console.log("klik")
-   fetchData()
+    fetchData()
 
-   startLoading()
+    // Laat een loading state zien terwijl gegevens worden opgehaald
+    startLoading()
 })
 
 
+// Functie om gegevens van API op te halen
 export const fetchData = () => {
     const url = 'https://opensheet.elk.sh/12nr4W-RHpvhnw76MCZZtujYHqP1qIU28ExM4oXQfzys/blad1';
     // const url = 'https://opensheet.elk.sh/12nr4W-RHpvhnw7jdfhdhdf6MCZZtujYHqP1qIU28ExM4oXQfzys/blad1';
 
+    // Haal gegevens op van de API
     const data = fetch(url)
-    
-    .then(response => response.json())
 
-    .then((data) => {
-        // Deze voor als hij kan fetchen maar niks binnen haalt -robert
-        if(data.error) {
-            handleFetchError(deQuote, data.error);
-            return;
-        }
+        // Converteer gegevens naar JSON-indeling
+        .then(response => response.json())
 
-        console.log(data);
-  
-        // random quotes genereren
-        const index = Math.floor(Math.random() * data.length);
-        console.log(index);
-  
-        // Loading state + progressive enhancement
-        setTimeout(() => {
-        //   loader.classList.remove('display')
-          stopLoading();
+        // Manipuleer gegevens en pas deze toe op de HTML-elementen
+        .then((data) => {
 
-          // data veranderen
-          changeTitel(data[index].author);
-          changeQuote(data[index].quote);
-        }, 1000);
-  
-        // data veranderen oude plek
-        // changeTitel(data[index].author);
-        // changeQuote(data[index].quote);
-      })
-      // error state 
-      .catch(err => {
-        //   console.log(deQuote)
-        //   console.log('failed')
-          handleFetchError(deQuote, err);
-      });
-  };
-  
+            // Deze voor als hij kan fetchen maar niks binnen haalt - bron: robert
+            // Toon foutmelding als gegevens niet kunnen worden opgehaald
+            if (data.error) {
+                handleFetchError(deQuote, data.error);
+                return;
+            }
 
-  
+            console.log(data);
+
+            // random quotes genereren
+            const index = Math.floor(Math.random() * data.length);
+            console.log(index);
+
+            // Loading state + progressive enhancement
+            // Wacht een seconde en pas dan veranderingen toe op de HTML-elementen
+            setTimeout(() => {
+                stopLoading();
+
+                // data veranderen
+                changeTitel(data[index].author);
+                changeQuote(data[index].quote);
+            }, 1000);
+        })
+
+        // error state 
+        // Toon foutmelding als gegevens niet kunnen worden opgehaald
+        .catch(err => {
+            handleFetchError(deQuote, err);
+        });
+};
 
 
-            // //Loading state stoppen
-            // .then(json => {
-            //     display.textContent="";
-            // })
-
-            // }
-
-        //      // function loading(state) {
-        // const loader = document.querySelector('svg.loader')
-        // if (state == 'on') {
-        //    loader.classList.add(state)
-        // } else {
-        //     loader.classList.remove(state)
-        // }
-        
-    
 
 
-        //empty error en loading state moeten erin
+// PROCES
+// //Loading state stoppen
+// .then(json => {
+//     display.textContent="";
+// })
+
+// }
+
+//      // function loading(state) {
+// const loader = document.querySelector('svg.loader')
+// if (state == 'on') {
+//    loader.classList.add(state)
+// } else {
+//     loader.classList.remove(state)
+// }
+
+
+//empty error en loading state moeten erin
 
 
 //Loading state
@@ -138,11 +136,11 @@ export const fetchData = () => {
 //                     // data veranderen
 //                     changeTitel(data[index].author);
 //                     changeQuote(data[index].quote);
-        
+
 //                 }, 1000)
 
-                
-            
+
+
 //                 // data veranderen oude plek
 //                 // changeTitel(data[index].author);
 //                 // changeQuote(data[index].quote);
@@ -153,7 +151,6 @@ export const fetchData = () => {
 //             //   })
 // }
 
-        
 
 // Random manieren van fetchen waar ik mee heb geexperimenteerd
 
@@ -209,10 +206,10 @@ export const fetchData = () => {
 // Fetchen van de API
 // function fetchData (){
 //         const url = 'https://quote.api.fdnd.nl/v1/quote'
-    
+
 //     // console.log(1)
 //     fetchData()
-    
+
 //     const data = fetch(url)
 
 //             .then(response =>
@@ -227,7 +224,7 @@ export const fetchData = () => {
 //                 // data veranderen
 //                 changeH1(data);
 //             })
-        
+
 //         )}
 
 //         function element (element) {
